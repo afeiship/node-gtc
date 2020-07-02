@@ -5,7 +5,7 @@
 
   nx.fetchWithDebug = function (inFetch) {
     return function (inUrl, inOptions) {
-      nxLog(inUrl, inOptions);
+      inOptions.debug && nxLog(inUrl, inOptions);
       return inFetch(inUrl, inOptions);
     }
   };

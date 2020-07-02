@@ -2,8 +2,8 @@
  * name: @feizheng/next-fetch-with-debug
  * description: Debug middleware for next fetch.
  * homepage: https://github.com/afeiship/next-fetch-with-debug
- * version: 1.0.0
- * date: 2020-07-02T08:32:35.570Z
+ * version: 1.0.1
+ * date: 2020-07-02T08:34:28.641Z
  * license: MIT
  */
 
@@ -14,7 +14,7 @@
 
   nx.fetchWithDebug = function (inFetch) {
     return function (inUrl, inOptions) {
-      nxLog(inUrl, inOptions);
+      inOptions.debug && nxLog(inUrl, inOptions);
       return inFetch(inUrl, inOptions);
     }
   };

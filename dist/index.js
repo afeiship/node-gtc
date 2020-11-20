@@ -3,7 +3,7 @@
  * description: Debug middleware for next fetch.
  * homepage: https://github.com/afeiship/next-fetch-with-debug
  * version: 1.0.0
- * date: 2020-11-20 17:50:25
+ * date: 2020-11-20 17:53:02
  * license: MIT
  */
 

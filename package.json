@@ -39,5 +39,11 @@
   },
   "dependencies": {
     "@jswork/next-log": "^1.0.0"
-  }
+  },
+  "keywords": [
+    "next",
+    "fetch",
+    "debug",
+    "middleware"
+  ]
 }

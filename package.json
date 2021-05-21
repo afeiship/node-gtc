@@ -37,9 +37,6 @@
     "access": "public",
     "registry": "https://registry.npmjs.org"
   },
-  "dependencies": {
-    "@jswork/next-log": "^1.0.0"
-  },
   "keywords": [
     "next",
     "fetch",

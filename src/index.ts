@@ -12,6 +12,7 @@ interface GtcCommandRc {
 }
 
 const DEFAULT_FORMAT = 'yyyy-mm-dd HH:MM:ss';
+const EMOJI_RE = /\p{Emoji}/gu;
 const DEFAULT_COMMANDS: GtcCommandRc = {
   commands: [
     { label: '🍏 发布到 beta 环境', value: 'beta' },
@@ -25,6 +26,7 @@ const DEFAULT_COMMANDS: GtcCommandRc = {
   ] as GtcCommand[],
 };
 
+const cleanEmoji = (inString: string) => inString.replace(EMOJI_RE, '');
 const STR2ICON = {
   '@beta': '🍏',
   '@staging': '🍊',
@@ -38,7 +40,7 @@ const nodeGtc = (inGtcRc, inValue: string) => {
   const cmd = items.find((c) => c.value === inValue);
   const action = `__@${cmd?.value}__`;
   const gtcMsg = cmd ? `${cmd.label} ${action}` : inValue;
-  const message = gtcMsg + ' at ' + dateformat(null, DEFAULT_FORMAT);
+  const message = cleanEmoji(gtcMsg) + ' at ' + dateformat(null, DEFAULT_FORMAT);
   const icon = cmd?.icon || kiv(gtcMsg, STR2ICON);
   const cmds = [
     'git pull',

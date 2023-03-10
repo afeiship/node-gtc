@@ -1,6 +1,6 @@
 {
   "name": "@jswork/node-gtc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github/gitlab trigger message node.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -43,5 +43,11 @@
   "dependencies": {
     "@jswork/kiv": "^1.0.2",
     "dateformat": "^3.0.3"
-  }
+  },
+  "keywords": [
+    "github",
+    "gitlab",
+    "gtc",
+    "message"
+  ]
 }

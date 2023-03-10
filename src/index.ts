@@ -50,5 +50,6 @@ export default (inGtcRc, inValue: string) => {
   return {
     icon,
     cmds,
+    message
   };
 };

@@ -14,14 +14,14 @@ interface GtcCommandRc {
 const DEFAULT_FORMAT = 'yyyy-mm-dd HH:MM:ss';
 export const DEFAULT_COMMANDS: GtcCommandRc = {
   commands: [
-    { label: '发布到 beta 环境', value: 'beta' },
-    { label: '发布到 staging 环境', value: 'staging' },
-    { label: '发布到 production 环境', value: 'production' },
+    { label: '🍏 发布到 beta 环境', value: 'beta' },
+    { label: '🍐 发布到 staging 环境', value: 'staging' },
+    { label: '🍎 发布到 production 环境', value: 'production' },
+    { label: '🍞 仅更新 cache 的 node_modules', value: 'cache' },
     { label: '仅 build 当前项目', value: 'build' },
     { label: '仅上传到 beta 环境', value: 'upload-beta' },
     { label: '仅上传到 staging 环境', value: 'upload-staging' },
     { label: '仅上传到 production 环境', value: 'upload-production' },
-    { label: '仅更新 cache 的 node_modules', value: 'cache' },
   ] as GtcCommand[],
 };
 
@@ -50,6 +50,6 @@ export default (inGtcRc, inValue: string) => {
   return {
     icon,
     cmds,
-    message
+    message,
   };
 };

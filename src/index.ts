@@ -33,7 +33,7 @@ const STR2ICON = {
   '@cache': '📦',
 };
 
-export default (inGtcRc, inValue: string) => {
+const nodeGtc = (inGtcRc, inValue: string) => {
   const items = inGtcRc.commands || DEFAULT_COMMANDS.commands;
   const cmd = items.find((c) => c.value === inValue);
   const action = `__@${cmd?.value}__`;
@@ -51,6 +51,7 @@ export default (inGtcRc, inValue: string) => {
     icon,
     cmds,
     message,
-    DEFAULT_COMMANDS,
   };
 };
+
+export { DEFAULT_COMMANDS, nodeGtc };

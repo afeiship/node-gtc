@@ -1,5 +1,5 @@
-# next-fetch-with-debug
-> Debug middleware for next fetch.
+# node-gtc
+> Github/gitlab trigger message node.
 
 [![version][version-image]][version-url]
 [![license][license-image]][license-url]
@@ -7,26 +7,28 @@
 [![download][download-image]][download-url]
 
 ## installation
-```bash
-npm install -S @jswork/next-fetch-with-debug
+```shell
+npm install @jswork/node-gtc
 ```
 
 ## usage
 ```js
-import '@jswork/next-fetch-with-debug';
+import nodeGtc from '@jswork/node-gtc';
+
+// usage goes here.
 ```
 
 ## license
-Code released under [the MIT license](https://github.com/afeiship/next-fetch-with-debug/blob/master/LICENSE.txt).
+Code released under [the MIT license](https://github.com/afeiship/node-gtc/blob/master/LICENSE.txt).
 
-[version-image]: https://img.shields.io/npm/v/@jswork/next-fetch-with-debug
-[version-url]: https://npmjs.org/package/@jswork/next-fetch-with-debug
+[version-image]: https://img.shields.io/npm/v/@jswork/node-gtc
+[version-url]: https://npmjs.org/package/@jswork/node-gtc
 
-[license-image]: https://img.shields.io/npm/l/@jswork/next-fetch-with-debug
-[license-url]: https://github.com/afeiship/next-fetch-with-debug/blob/master/LICENSE.txt
+[license-image]: https://img.shields.io/npm/l/@jswork/node-gtc
+[license-url]: https://github.com/afeiship/node-gtc/blob/master/LICENSE.txt
 
-[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/next-fetch-with-debug
-[size-url]: https://github.com/afeiship/next-fetch-with-debug/blob/master/dist/next-fetch-with-debug.min.js
+[size-image]: https://img.shields.io/bundlephobia/minzip/@jswork/node-gtc
+[size-url]: https://github.com/afeiship/node-gtc/blob/master/dist/node-gtc.min.js
 
-[download-image]: https://img.shields.io/npm/dm/@jswork/next-fetch-with-debug
-[download-url]: https://www.npmjs.com/package/@jswork/next-fetch-with-debug
+[download-image]: https://img.shields.io/npm/dm/@jswork/node-gtc
+[download-url]: https://www.npmjs.com/package/@jswork/node-gtc

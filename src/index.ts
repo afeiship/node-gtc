@@ -12,7 +12,7 @@ interface GtcCommandRc {
 }
 
 const DEFAULT_FORMAT = 'yyyy-mm-dd HH:MM:ss';
-const DEFAULT_COMMANDS: GtcCommandRc = {
+export const DEFAULT_COMMANDS: GtcCommandRc = {
   commands: [
     { label: '发布到 beta 环境', value: 'beta' },
     { label: '发布到 staging 环境', value: 'staging' },

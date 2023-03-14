@@ -11,4 +11,15 @@ describe('api.basic', () => {
 
     expect(res.icon).toBe('🆎');
   });
+
+  test('old gtc file works fine', () => {
+    const res = nodeGtc({
+      commands: [
+        { name: 'Go to beta', value: 'beta', icon:'🆎' },
+        { name: 'Go to production', value: 'prod' },
+      ],
+    }, 'beta');
+
+    expect(res.icon).toBe('🆎');
+  });
 });

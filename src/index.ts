@@ -4,6 +4,7 @@ import dateformat from 'dateformat';
 interface GtcCommand {
   label: string;
   value: string;
+  name?:string;
   icon?: string;
 }
 
@@ -39,7 +40,7 @@ const nodeGtc = (inGtcRc, inValue: string) => {
   const items = inGtcRc.commands || DEFAULT_COMMANDS.commands;
   const cmd = items.find((c) => c.value === inValue);
   const action = `__@${cmd?.value}__`;
-  const gtcMsg = cmd ? `${cmd.label} ${action}` : inValue;
+  const gtcMsg = cmd ? `${cmd.name || cmd.label} ${action}` : inValue;
   const message = cleanEmoji(gtcMsg) + ' at ' + dateformat(null, DEFAULT_FORMAT);
   const icon = cmd?.icon || kiv(gtcMsg, STR2ICON);
   const cmds = [

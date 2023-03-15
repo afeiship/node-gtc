@@ -4,7 +4,7 @@ import dateformat from 'dateformat';
 interface GtcCommand {
   label: string;
   value: string;
-  name?:string;
+  name?: string;
   icon?: string;
 }
 
@@ -27,7 +27,7 @@ const DEFAULT_COMMANDS: GtcCommandRc = {
   ] as GtcCommand[],
 };
 
-const cleanEmoji = (inString: string) => inString.replace(EMOJI_RE, '');
+const cleanEmoji = (inString: string) => inString.replace(EMOJI_RE, '').trim();
 const STR2ICON = {
   '@beta': '🍏',
   '@staging': '🍊',

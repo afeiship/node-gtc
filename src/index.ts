@@ -1,5 +1,6 @@
 import kiv from '@jswork/kiv';
 import dateformat from 'dateformat';
+import semver from 'semver';
 
 interface GtcCommand {
   label: string;
@@ -9,12 +10,14 @@ interface GtcCommand {
 }
 
 interface GtcCommandRc {
+  autoVersion?: boolean;
   commands: GtcCommand[];
 }
 
 const DEFAULT_FORMAT = 'yyyy-mm-dd HH:MM:ss';
 const EMOJI_RE = /\p{Emoji}/gu;
 const DEFAULT_COMMANDS: GtcCommandRc = {
+  autoVersion: false,
   commands: [
     { label: '🍏 发布到 beta 环境', value: 'beta' },
     { label: '🍐 发布到 staging 环境', value: 'staging' },
@@ -57,4 +60,14 @@ const nodeGtc = (inGtcRc, inValue: string) => {
   };
 };
 
-export { DEFAULT_COMMANDS, nodeGtc };
+class GtcVersion {
+  static patch(inVer: string, inIdentifier = 'beta') {
+    return semver.inc(inVer, 'prerelease', inIdentifier);
+  }
+
+  static release(inVer: string) {
+    return semver.inc(inVer, 'patch');
+  }
+}
+
+export { DEFAULT_COMMANDS, nodeGtc, GtcVersion };

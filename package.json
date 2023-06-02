@@ -41,7 +41,8 @@
   "homepage": "https://js.work",
   "dependencies": {
     "@jswork/kiv": "^1.0.2",
-    "dateformat": "^3.0.3"
+    "dateformat": "^3.0.3",
+    "semver": "^7.5.1"
   },
   "keywords": [
     "github",

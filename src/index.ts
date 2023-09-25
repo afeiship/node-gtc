@@ -47,7 +47,7 @@ const nodeGtc = (inGtcRc, inValue: string) => {
   const message = cleanEmoji(gtcMsg) + ' at ' + dateformat(null, DEFAULT_FORMAT);
   const icon = cmd?.icon || kiv(gtcMsg, STR2ICON);
   const cmds = [
-    'git pull --merge',
+    'git pull --no-rebase',
     'git add --all',
     `git commit -m "chore: ${icon} ${message}"`,
     'git push',

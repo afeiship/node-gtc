@@ -48,7 +48,7 @@ const nodeGtc = (inGtcRc, inValue: string) => {
   const icon = cmd?.icon || kiv(gtcMsg, STR2ICON);
   const cmds = [
     'git pull --no-rebase',
-    'git add --all',
+    'git add package.json',
     `git commit -m "chore: ${icon} ${message}"`,
     'git push',
   ];

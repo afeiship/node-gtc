@@ -1,6 +1,6 @@
 {
   "name": "@jswork/node-gtc",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Github/gitlab trigger message node.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
